@@ -10,8 +10,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.knownyc.presentation.navigation.AppNavigationGraph
-import com.example.knownyc.presentation.ui.theme.KnowNYCTheme
 import dagger.hilt.android.AndroidEntryPoint
+import com.example.knownyc.presentation.ui.theme.KnowNYCTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
