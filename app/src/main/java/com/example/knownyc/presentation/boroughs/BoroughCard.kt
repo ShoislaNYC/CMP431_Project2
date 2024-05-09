@@ -55,21 +55,6 @@ fun BoroughCard(
 
     ) {
         Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(30.dp)
-        ){
-            Text(
-                text = "NYC Parks by Borough",
-                textAlign = TextAlign.Center,
-                fontWeight = FontWeight.Bold,
-                modifier = modifier
-                    .fillMaxWidth()
-                    .align(Alignment.CenterStart)
-            )
-
-        }
-        Box(
             modifier = Modifier.fillMaxSize()
         ){
             Text(
