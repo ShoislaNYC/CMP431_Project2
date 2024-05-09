@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
@@ -16,6 +18,7 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
@@ -37,6 +40,25 @@ fun BoroughsScreen(
     LazyColumn(
         modifier = modifier
     ) {
+        item {
+            Box(
+                modifier = Modifier.fillMaxWidth()
+                    .padding(8.dp)
+                    .height(40.dp)
+            ){
+                Text(
+                    text = "NYC Parks by Borough",
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onBackground,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 25.sp,
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .align(Alignment.Center)
+
+                )
+            }
+        }
         items(state.boroughs){borough ->
             BoroughCard(
                 name = borough.name,
