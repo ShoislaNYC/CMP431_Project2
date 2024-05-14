@@ -40,25 +40,6 @@ fun BoroughsScreen(
     LazyColumn(
         modifier = modifier
     ) {
-//        item {
-//            Box(
-//                modifier = Modifier.fillMaxWidth()
-//                    .padding(8.dp)
-//                    .height(40.dp)
-//            ){
-//                Text(
-//                    text = "NYC Parks by Borough",
-//                    textAlign = TextAlign.Center,
-//                    color = MaterialTheme.colorScheme.onBackground,
-//                    fontWeight = FontWeight.Bold,
-//                    fontSize = 25.sp,
-//                    modifier = modifier
-//                        .fillMaxWidth()
-//                        .align(Alignment.Center)
-//
-//                )
-//            }
-//        }
         items(state.boroughs){borough ->
             BoroughCard(
                 name = borough.name,

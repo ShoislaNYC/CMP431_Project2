@@ -2,9 +2,13 @@ package com.example.knownyc.data.models
 
 import com.example.knownyc.commons.AppError
 import com.example.knownyc.domain.models.Park
+import kotlinx.serialization.Serializable
 
+//@Serializable
+@Serializable
 data class NycParkResponse(
-    val isLoading: Boolean = false,
-    val parks: List<Park> = emptyList(),
-    val error: AppError? = null,
+    val signname: String,
+    val location: String,
+    val url: String= "",
+    val waterfront: Boolean? = false,
 )

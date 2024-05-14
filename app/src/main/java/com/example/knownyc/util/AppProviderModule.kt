@@ -35,13 +35,12 @@ abstract  class AppProviderModule{
     @Singleton
     abstract fun boroughRepositoryProvider(impl: BoroughsRepositoryImpl): BoroughsRepository
 
-//    @Binds
-//    @Singleton
-//    abstract fun nycParksRepositoryProvider(impl: NycParksRepositoryImpl): NycParksRepository
+    @Binds
+    @Singleton
+    abstract fun nycParksRepositoryProvider(impl: NycParksRepositoryImpl): NycParksRepository
 
     //API Service
     companion object{
-
         @Singleton
         @Provides
         fun nycOpenDataApiServiceProvider(): NycOpenDataApiService {

@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.knownyc.R
 import com.example.knownyc.presentation.boroughs.BoroughsScreen
+import com.example.knownyc.presentation.parks.NycParksScreen
 import com.example.knownyc.presentation.ui.util.scaffold.AppScaffold
 import com.example.knownyc.presentation.ui.util.scaffold.TitleText
 
@@ -89,8 +90,11 @@ fun AppNavigationGraph(){
                             type = NavType.StringType
                         }
                     )
-                ){
-
+                ){backStackEntry ->
+                    NycParksScreen(
+                        boroughCode = backStackEntry.arguments?.getString("borough")!!,
+//                        searchText = searchText.value
+                    )
                 }
 
             }
